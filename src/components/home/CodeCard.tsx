@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { CODE_CARD } from "@/lib/constants";
+import GlowEffect from "@/components/ui/GlowEffect";
 
 export default function CodeCard() {
   return (
@@ -12,8 +13,7 @@ export default function CodeCard() {
       className="relative w-full max-w-lg"
     >
       {/* Glow effect */}
-      <div className="absolute -inset-px rounded-xl bg-gradient-to-br from-accent/30 via-transparent to-purple-500/20 blur-sm" />
-      <div className="absolute -inset-px rounded-xl bg-gradient-to-br from-accent/20 via-transparent to-purple-500/10" />
+      <GlowEffect rounded="xl" />
 
       {/* Card */}
       <div className="relative rounded-xl border border-surface-light bg-surface/90 shadow-2xl backdrop-blur-sm">

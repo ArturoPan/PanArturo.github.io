@@ -8,8 +8,7 @@ export default function AboutPage() {
 
         {/* Left: photo + status */}
         <div className="flex flex-col items-center gap-6 lg:items-start">
-          <ProfilePhoto />
-          {/* Uncomment and add your photo: <ProfilePhoto src="/photo.jpg" /> */}
+          <ProfilePhoto src="/photo.jpg" />
           <CurrentStatus />
         </div>
 
@@ -22,20 +21,22 @@ export default function AboutPage() {
 
           <div className="flex flex-col gap-4 text-muted">
             <p>
-              Hi, I&apos;m Arturo — a software engineer based in the Washington,
-              D.C. area. I currently work at Capital One building backend systems
-              for credit card transaction processing, where I focus on writing
-              reliable, scalable services that handle real-world financial data.
+              Hi, I&apos;m Arturo — a software engineer based in Southern
+              California. I spent 3 years at Capital One building backend
+              systems, APIs, and data infrastructure for applications
+              at scale.
             </p>
             <p>
-              [Add your personal paragraph here — your background, what drives
-              you, what you care about outside of work, anything that makes you
-              you.]
+              I&apos;m currently exploring agentic AI and building projects with
+              LLMs and autonomous agents. I&apos;m drawn to how AI can tackle
+              complex, multi-step problems, and I&apos;m learning by shipping —
+              building tools, experimenting with frameworks, and seeing
+              what&apos;s possible.
             </p>
             <p>
-              Outside of work, I&apos;m always looking to grow — whether that&apos;s
-              exploring new technologies, contributing to side projects, or
-              sharpening skills that keep me well-rounded as an engineer.
+              Outside of coding, I enjoy playing basketball, photography, and
+              spending time with family. I also occasionally help out with the
+              family business.
             </p>
           </div>
         </div>

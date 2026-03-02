@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Briefcase } from "lucide-react";
+import { Briefcase, ExternalLink } from "lucide-react";
 import { EXPERIENCES } from "@/lib/constants";
 import { UnlockProvider } from "./UnlockContext";
 import DeepDive from "./DeepDive";
@@ -32,7 +32,20 @@ export default function Timeline() {
             <div className="pb-10 flex-1">
               <div className="flex flex-wrap items-center gap-3">
                 <h3 className="font-semibold text-foreground">
-                  {exp.role} · {exp.company}
+                  {exp.role} ·{" "}
+                  {exp.link ? (
+                    <a
+                      href={exp.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-accent hover:underline"
+                    >
+                      {exp.company}
+                      <ExternalLink size={13} />
+                    </a>
+                  ) : (
+                    exp.company
+                  )}
                 </h3>
                 {exp.latest && (
                   <span className="rounded-full bg-accent/10 px-3 py-0.5 text-xs font-medium text-accent">

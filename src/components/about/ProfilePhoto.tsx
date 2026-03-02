@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { User } from "lucide-react";
+import GlowEffect from "@/components/ui/GlowEffect";
 
 type ProfilePhotoProps = {
   src?: string;
@@ -9,8 +10,7 @@ export default function ProfilePhoto({ src }: ProfilePhotoProps) {
   return (
     <div className="relative mx-auto w-fit">
       {/* Glow effect */}
-      <div className="absolute -inset-px rounded-2xl bg-gradient-to-br from-accent/30 via-transparent to-purple-500/20 blur-sm" />
-      <div className="absolute -inset-px rounded-2xl bg-gradient-to-br from-accent/20 via-transparent to-purple-500/10" />
+      <GlowEffect rounded="2xl" />
 
       {/* Photo frame */}
       <div className="relative h-72 w-64 overflow-hidden rounded-2xl border border-surface-light bg-surface">

@@ -6,7 +6,7 @@ export default function ExperiencePage() {
       <h1 className="text-3xl font-bold">Experience</h1>
 
       <p className="mt-3 text-2xl font-bold text-accent">
-        From 100B+ daily records to 17M+ daily requests.
+        From billions of daily records to millions of daily requests.
       </p>
 
       <p className="mt-4 text-muted">

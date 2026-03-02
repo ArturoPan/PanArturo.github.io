@@ -1,7 +1,7 @@
 export const SITE = {
   name: "AP",
   fullName: "Arturo Pan",
-  title: "Software Engineer",
+  title: "Software Development Engineer",
   description:
     "Engineering backend systems that power real-world products at scale.",
   email: "artpanloo@gmail.com",
@@ -33,14 +33,20 @@ export type Skill = {
 };
 
 export const SKILLS: Skill[] = [
+  // Languages
   {
     name: "Java",
     category: "Language",
     experience: [
       {
-        where: "Capital One",
+        where: "Capital One — Card Transactions (GraphQL API)",
         description:
-          "Primary language for building credit card transaction processing services. Used extensively with Spring Boot to build scalable, production-grade backend systems.",
+          "Built GraphQL resolvers on the Pending and Posted Transactions Spring Boot microservices as part of the unified federated API, deployed via phased rollout to downstream mobile and web clients.",
+      },
+      {
+        where: "Capital One — Card Transactions (Shared Library)",
+        description:
+          "Owned a shared Java enrichment library standardizing transaction logic across 8 Spring Boot services, eliminating 12,000+ lines of duplicated code — a 70% reduction.",
       },
     ],
   },
@@ -49,9 +55,19 @@ export const SKILLS: Skill[] = [
     category: "Language",
     experience: [
       {
-        where: "Internship & Personal Projects",
+        where: "Capital One — Card Transactions (Schema Analyzer)",
         description:
-          "Used for scripting, data processing pipelines, and building backend services. Also used for automation tooling during internship work.",
+          "Built a schema dependency analyzer using Python and Tree-sitter to detect GraphQL field usage across 150+ Java/TypeScript/Go repos, cutting dependency analysis from 6 weeks to 2 weeks.",
+      },
+      {
+        where: "Capital One — Card Transactions (Tooling)",
+        description:
+          "Used Python daily for internal tooling, automation scripts, and developer productivity work throughout the role.",
+      },
+      {
+        where: "Capital One — Enterprise Data",
+        description:
+          "Used PySpark for large-scale data processing jobs on EMR and Databricks, alongside the primary Scala pipeline for record validation, transformation, and Delta Lake writes.",
       },
     ],
   },
@@ -60,9 +76,19 @@ export const SKILLS: Skill[] = [
     category: "Language",
     experience: [
       {
-        where: "Internship & Personal Projects",
+        where: "Capital One — Card Transactions",
         description:
-          "Used across full-stack projects including this portfolio. Preferred over plain JavaScript for the type safety and better developer experience.",
+          "Built the developer portal frontend and GraphQL tooling in TypeScript/React, enabling 60+ teams to adopt the unified API and reducing onboarding time by 2–4 weeks per team.",
+      },
+      {
+        where: "Capital One — Intern",
+        description:
+          "Built an internal analytics dashboard using TypeScript with GitHub and Jenkins APIs, surfacing build insights for engineering leadership.",
+      },
+      {
+        where: "Personal Projects",
+        description:
+          "Used across full-stack projects including this portfolio — preferred for type safety and developer experience over plain JavaScript.",
       },
     ],
   },
@@ -71,20 +97,63 @@ export const SKILLS: Skill[] = [
     category: "Language",
     experience: [
       {
-        where: "Internship & Personal Projects",
+        where: "FillStorShip",
         description:
-          "Foundation for all web development work. Used in early internship projects before transitioning to TypeScript.",
+          "Built the full warehouse management system frontend in React/JavaScript before adopting TypeScript.",
+      },
+      {
+        where: "Cal Poly Pomona",
+        description:
+          "Developed a real-time shuttle tracking web app in JavaScript/AngularJS serving 20,000+ students.",
       },
     ],
   },
+  {
+    name: "Scala",
+    category: "Language",
+    experience: [
+      {
+        where: "Capital One — Enterprise Data (Orchestration Service)",
+        description:
+          "Primary language for an event orchestration service processing hundreds of millions of records into Delta Lake, running on EMR and Databricks at enterprise scale.",
+      },
+      {
+        where: "Capital One — Enterprise Data (Validation & Quarantine)",
+        description:
+          "Implemented validation, quarantine, and lifecycle logic in Scala — failed records were isolated with DynamoDB state tracking and could be restored or deleted via lifecycle operations.",
+      },
+    ],
+  },
+  // Backend
   {
     name: "Spring Boot",
     category: "Backend",
     experience: [
       {
-        where: "Capital One",
+        where: "Capital One — Card Transactions (Microservices)",
         description:
-          "Built and maintained microservices using Spring Boot for high-throughput transaction processing. Worked with dependency injection, REST controllers, and service layers.",
+          "Built and maintained Spring Boot microservices for high-throughput credit card transaction processing, working with dependency injection, REST controllers, and service layers.",
+      },
+      {
+        where: "Capital One — Card Transactions (GraphQL API)",
+        description:
+          "Shipped a federated GraphQL API with 10+ resolvers built on top of the Pending and Posted Transaction Spring Boot services, integrated with the unified developer portal.",
+      },
+    ],
+  },
+  {
+    name: "GraphQL",
+    category: "Backend",
+    experience: [
+      {
+        where: "Capital One — Card Transactions (Federated API)",
+        description:
+          "Designed and shipped a federated GraphQL API with 10+ resolvers unifying Posted and Pending Transaction microservices, deployed via phased rollout to downstream clients.",
+      },
+      {
+        where: "Capital One — Card Transactions (Developer Portal)",
+        description:
+          "Built schema validation tooling and GraphQL test clients for the developer portal, enabling 60+ teams to adopt the API with reduced onboarding friction.",
       },
     ],
   },
@@ -93,9 +162,9 @@ export const SKILLS: Skill[] = [
     category: "Backend",
     experience: [
       {
-        where: "Internship",
+        where: "FillStorShip",
         description:
-          "Built RESTful APIs and backend services during full-stack internship. Used with Express to handle routing, middleware, and database interactions.",
+          "Built the backend for a warehouse management system serving 1,000+ customers — REST APIs, middleware, and MongoDB integration using Node.js and Express.",
       },
     ],
   },
@@ -104,9 +173,30 @@ export const SKILLS: Skill[] = [
     category: "Backend",
     experience: [
       {
-        where: "Capital One & Internships",
+        where: "Capital One — Card Transactions",
         description:
-          "Designed and consumed REST APIs across multiple roles. At Capital One, worked on internal APIs handling transaction data at scale.",
+          "Led E2E testing for a transactions pipeline covering 20+ API endpoints using Gatling, K6, WireMock, and JUnit in CI/CD.",
+      },
+      {
+        where: "Capital One — Intern",
+        description:
+          "Consumed GitHub and Jenkins REST APIs to build an analytics dashboard surfacing build metrics for engineering leadership.",
+      },
+    ],
+  },
+  {
+    name: "Apache Spark",
+    category: "Backend",
+    experience: [
+      {
+        where: "Capital One — Enterprise Data (Processing)",
+        description:
+          "Ran Spark jobs on EMR and Databricks to process and validate hundreds of millions of records into Delta Lake as part of the event orchestration pipeline.",
+      },
+      {
+        where: "Capital One — Enterprise Data (On-Call)",
+        description:
+          "Debugged failed EMR Spark jobs during monthly on-call rotations, restoring quarantined data and resolving production incidents.",
       },
     ],
   },
@@ -115,20 +205,36 @@ export const SKILLS: Skill[] = [
     category: "Backend",
     experience: [
       {
-        where: "Capital One & Internships",
+        where: "Capital One — Card Transactions",
         description:
-          "Wrote complex queries for data retrieval and analysis. Used relational databases to support backend services and internal reporting.",
+          "Worked with SQL as part of GraphQL API development and API migration work — querying transaction data, validating data correctness across services, and supporting schema and data model changes during migrations.",
+      },
+      {
+        where: "Capital One — Enterprise Data",
+        description:
+          "Integrated AWS Glue Catalog to auto-register table schemas and partitions, enabling analysts to run SQL queries via Athena (AWS's serverless SQL query engine over S3) — reducing query latency from hours to minutes.",
+      },
+      {
+        where: "FillStorShip & Internships",
+        description:
+          "Used relational databases to support backend services and reporting in internship projects.",
       },
     ],
   },
+  // Frontend
   {
     name: "React",
     category: "Frontend",
     experience: [
       {
-        where: "Internship & Personal Projects",
+        where: "Capital One — Card Transactions",
         description:
-          "Built dynamic UIs during internship and personal projects including this portfolio. Comfortable with hooks, component patterns, and state management.",
+          "Built the developer portal UI in React/TypeScript — schema validation tools, GraphQL test clients, and usage dashboards used by 60+ internal teams.",
+      },
+      {
+        where: "FillStorShip",
+        description:
+          "Built the full-stack warehouse management frontend in React with real-time inventory tracking and integrated hardware scanner support.",
       },
     ],
   },
@@ -139,7 +245,18 @@ export const SKILLS: Skill[] = [
       {
         where: "Personal Projects",
         description:
-          "Used for this portfolio. Leverages the App Router, server components, and Vercel deployment for a fast, modern web experience.",
+          "Used for this portfolio site — App Router, server components, Framer Motion animations, and Vercel deployment.",
+      },
+    ],
+  },
+  {
+    name: "Tailwind CSS",
+    category: "Frontend",
+    experience: [
+      {
+        where: "Personal Projects",
+        description:
+          "Primary styling system for this portfolio. Used utility-first classes with a custom design system (dark surface palette, accent color, responsive layouts).",
       },
     ],
   },
@@ -148,31 +265,69 @@ export const SKILLS: Skill[] = [
     category: "Frontend",
     experience: [
       {
-        where: "Internship & Personal Projects",
+        where: "Cal Poly Pomona & Internships",
         description:
-          "Core foundation for all web work. Used Tailwind CSS extensively for styling, including this portfolio.",
+          "Foundation for all web projects — from the shuttle tracking app at Cal Poly to internship dashboards.",
       },
     ],
   },
+  // Tools
   {
     name: "AWS",
     category: "Tools",
     experience: [
       {
-        where: "Capital One",
+        where: "Capital One — Card Transactions",
         description:
-          "Worked with AWS services as part of the cloud infrastructure at Capital One. Exposure to services supporting backend deployments and data pipelines.",
+          "Daily work across the AWS ecosystem — deployed and operated microservices on EC2, ECS, and EKS; used S3, IAM, CloudWatch, and other core services as part of standard backend infrastructure.",
+      },
+      {
+        where: "Capital One — Enterprise Data (Data Lake)",
+        description:
+          "Used AWS Glue Catalog to auto-register table schemas and partitions, S3 as the data lake storage layer, and EMR to run Spark jobs — enabling Athena queries that reduced analyst latency from hours to minutes.",
+      },
+      {
+        where: "Capital One — Enterprise Data (Infrastructure)",
+        description:
+          "Used DynamoDB for pipeline state management, and operated within the broader AWS ecosystem including IAM, CloudWatch, and core cloud services.",
       },
     ],
   },
   {
-    name: "Docker",
+    name: "DynamoDB",
     category: "Tools",
     experience: [
       {
-        where: "Internship",
+        where: "Capital One — Enterprise Data",
         description:
-          "Used Docker to containerize services during internship, enabling consistent development and deployment environments.",
+          "Used DynamoDB to manage state for the event orchestration service, tracking record lifecycle through validation, quarantine, and ingestion stages.",
+      },
+      {
+        where: "Capital One — Intern",
+        description:
+          "Used DynamoDB as the storage backend for the analytics dashboard, persisting build metric data pulled from GitHub and Jenkins APIs.",
+      },
+    ],
+  },
+  {
+    name: "MongoDB",
+    category: "Tools",
+    experience: [
+      {
+        where: "FillStorShip",
+        description:
+          "Used MongoDB as the primary database for a warehouse management system serving 1,000+ customers — real-time inventory data, order records, and scanner events.",
+      },
+    ],
+  },
+  {
+    name: "Databricks",
+    category: "Tools",
+    experience: [
+      {
+        where: "Capital One — Enterprise Data",
+        description:
+          "Ran Spark jobs on Databricks alongside EMR for large-scale record processing and Delta Lake writes in the event orchestration pipeline.",
       },
     ],
   },
@@ -183,18 +338,29 @@ export const SKILLS: Skill[] = [
       {
         where: "Capital One & All Roles",
         description:
-          "Used daily across every role for version control. Comfortable with branching strategies, pull requests, code reviews, and resolving merge conflicts.",
+          "Used daily across every role — branching strategies, pull requests, code reviews, and merge conflict resolution in large multi-team codebases.",
       },
     ],
   },
   {
-    name: "PostgreSQL",
+    name: "Docker",
     category: "Tools",
     experience: [
       {
-        where: "Internship",
+        where: "Capital One",
         description:
-          "Used PostgreSQL as the primary database during internship projects. Wrote migrations, queries, and worked with ORM tooling.",
+          "Built and containerized backend applications using Docker across multiple teams. Used Docker as part of the standard development and CI/CD workflow for Spring Boot microservices.",
+      },
+    ],
+  },
+  {
+    name: "Kubernetes",
+    category: "Tools",
+    experience: [
+      {
+        where: "Capital One",
+        description:
+          "Built and deployed applications on Kubernetes (EKS) as part of the AWS-based infrastructure at Capital One. Worked with deployments, services, and cluster resources for backend microservice workloads.",
       },
     ],
   },
@@ -215,6 +381,7 @@ export type Experience = {
   description: string;
   bullets: string[];
   tech: string[];
+  link?: string;
   deepDive?: boolean;
   slides?: DeepDiveSlide[];
 };
@@ -227,15 +394,15 @@ export const EXPERIENCES: Experience[] = [
     period: "Aug. 2023 – Apr. 2025",
     latest: true,
     description:
-      "Built backend systems and developer tooling for credit card transaction processing at scale, serving 17M+ daily requests across mobile and web teams.",
+      "Built backend systems, APIs, and developer tooling for credit card transaction processing at scale.",
     bullets: [
-      "Built unified GraphQL API shipping 10+ federated resolvers integrating Posted and Pending Transactions Spring Boot microservices, serving 17M+ daily requests via phased rollout.",
+      "Built unified GraphQL API shipping 10+ federated resolvers integrating Posted and Pending Transactions Spring Boot microservices, deployed via phased rollout.",
       "Owned shared Java library standardizing transaction enrichment logic across 8 Spring Boot services, eliminating 12,000+ lines of duplicated code (70% reduction).",
       "Launched developer portal enabling 60+ teams to adopt the unified API through schema validation, GraphQL test clients, and usage dashboards built with TypeScript/React — reducing adoption time by 2–4 weeks per team.",
       "Built schema dependency analyzer reducing dependency analysis from 6 weeks to 2 weeks by automating field usage detection across 150+ Java/TypeScript/Go repos using Python and Tree-sitter.",
       "Led E2E testing for transactions pipeline covering 20+ API endpoints using Gatling/K6, WireMock, and JUnit in CI/CD.",
     ],
-    tech: ["Java", "Spring Boot", "GraphQL", "TypeScript", "React", "Python", "Tree-sitter", "Gatling", "K6", "WireMock", "JUnit"],
+    tech: ["Java", "Spring Boot", "GraphQL", "APIs", "TypeScript", "React", "Python", "Tree-sitter", "Gatling", "K6", "WireMock", "JUnit"],
     deepDive: true,
     slides: [
       {
@@ -266,9 +433,9 @@ export const EXPERIENCES: Experience[] = [
     location: "San Francisco, CA",
     period: "Aug. 2022 – Aug. 2023",
     description:
-      "Worked on a Scala event orchestration service processing 100B+ daily records to Delta Lake, building validation, ingestion, and data reliability tooling.",
+      "Worked on a Scala event orchestration service processing records to Delta Lake, building validation, ingestion, and data reliability tooling.",
     bullets: [
-      "Implemented validation and quarantine logic in Scala event orchestration service processing 100B+ daily records to Delta Lake, with DynamoDB state management and EMR/Databricks Spark execution.",
+      "Implemented validation and quarantine logic in Scala event orchestration service processing records to Delta Lake, with DynamoDB state management and EMR/Databricks Spark execution.",
       "Integrated AWS Glue Catalog API into ingestion pipeline to auto-register table schemas and partitions, reducing analyst query latency from hours to minutes via Athena.",
       "Resolved production incidents during monthly on-call rotations by debugging failed EMR Spark jobs and restoring quarantined data.",
     ],
@@ -278,7 +445,7 @@ export const EXPERIENCES: Experience[] = [
       {
         title: "Event Orchestration Pipeline",
         description:
-          "End-to-end view of the Scala orchestration service — how 100B+ daily records flow from source systems through validation, quarantine, and into Delta Lake via EMR/Databricks Spark jobs.",
+          "End-to-end view of the Scala orchestration service — how records flow from source systems through validation, quarantine, and into Delta Lake via EMR/Databricks Spark jobs.",
       },
       {
         title: "Validation & Quarantine Logic",
@@ -315,6 +482,7 @@ export const EXPERIENCES: Experience[] = [
       "Contributed to a JavaScript and AngularJS web application integrating a third-party GPS API to provide 20,000+ students with real-time university shuttle tracking.",
     ],
     tech: ["JavaScript", "AngularJS", "GPS API"],
+    link: "https://cpp.service-now.com/broncoshuttle",
   },
   {
     role: "Software Engineer Intern",
@@ -327,6 +495,7 @@ export const EXPERIENCES: Experience[] = [
       "Built a React, Node.js, and MongoDB warehouse management system serving 1,000+ customers with real-time inventory tracking and integrated hardware scanners.",
     ],
     tech: ["React", "Node.js", "MongoDB"],
+    link: "https://www.fillstorship.com/",
   },
 ];
 
@@ -337,8 +506,7 @@ export const CODE_CARD = {
     { type: "declaration", content: "const ", keyword: "developer", rest: " = {" },
     { type: "property", key: "name", value: "'Arturo Pan'" },
     { type: "property", key: "skills", value: "['Java', 'Python', 'TypeScript']" },
-    { type: "property", key: "focuses", value: "['Backend', 'Distributed Systems']" },
-    { type: "property", key: "style", value: "'Backend-first, full-stack capable'" },
+{ type: "property", key: "style", value: "'Backend-first, full-stack capable'" },
     { type: "property", key: "learning", value: "'Always'" },
     { type: "closing", content: "};" },
   ],

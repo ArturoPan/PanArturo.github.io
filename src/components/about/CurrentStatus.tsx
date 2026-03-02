@@ -1,8 +1,8 @@
 import { MapPin, Briefcase, GraduationCap } from "lucide-react";
 
 const STATUS = [
-  { icon: Briefcase, label: "Software Engineer at Capital One" },
-  { icon: MapPin, label: "Washington, D.C. Area" },
+  { icon: Briefcase, label: "Software Engineer" },
+  { icon: MapPin, label: "San Francisco, CA" },
   { icon: GraduationCap, label: "B.S. Computer Science" },
 ];
 
